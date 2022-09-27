@@ -6,4 +6,5 @@ app.get("/", (req, res) => {
 app.post("/",(req,res)=>{
   req.body.n
 })
-app.listen(3000);
+const port = process.env.port || 3000
+app.listen(port,()=>console.log("server is running on ",port));
